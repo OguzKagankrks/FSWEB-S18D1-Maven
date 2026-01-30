@@ -11,11 +11,21 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "kitap")
 public class Kitap {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long kitapno;
+    @Column(name = "kitapno")
+    private Long kitapno;
+
+    @Column(name = "ad")
     private String ad;
-    private int puan;
-    private long yazarno;
-    private long turno;
+
+    @Column(name = "puan")
+    private Integer puan;
+
+    @Column(name = "yazarno")
+    private Long yazarno;
+
+    @Column(name = "turno")
+    private Long turno;
 }
